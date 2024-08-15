@@ -5,7 +5,7 @@ import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
 import confetti from "canvas-confetti";
 import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
+import { title, subtitle } from "@/primitives";
 import { GithubIcon, NextUILogo, SearchIcon } from "@/components/icons";
 import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
@@ -13,8 +13,14 @@ import { Card, CardBody } from "@nextui-org/card";
 import { RadioGroup, Radio } from "@nextui-org/radio";
 import SectionHeader from "@/components/sectionHeader";
 import CourseCard from "@/components/courseCard";
+import courses from "@/contants/course";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  const text =
+    "Learn Data Science, Machine Leaning , Artificial Intelligence , Mobile and Web app Development with Industry Experts.".split(
+      " ",
+    );
   const handleConfetti = () => {
     confetti({
       particleCount: 100,
@@ -37,13 +43,33 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-lg text-center justify-center">
-        <h1 className={title()}>Your&nbsp;</h1>
-        <h1 className={title({ color: "violet" })}>Final&nbsp;</h1>
-        <br />
-        <h1 className={title()}>Course to Secure an IT Job.</h1>
+        <motion.span
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.01,
+          }}
+        >
+          <h1 className={title()}>Last&nbsp;</h1>
+          <h1 className={title({ color: "violet" })}>Option&nbsp;</h1>
+          <br />
+          <h1 className={title()}>Your Secure an IT Job</h1>
+        </motion.span>
         <h2 className={subtitle({ class: "mt-4" })}>
-          Learn Data Science, Machine Leaning , Artificial Intelligence , Mobile
-          and Web app Development with Industry Experts.
+          {text.map((el, i) => (
+            <motion.span
+              key={i}
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              transition={{
+                duration: 1,
+                delay: i / 10,
+              }}
+            >
+              {el}{" "}
+            </motion.span>
+          ))}
         </h2>
       </div>
 
@@ -113,12 +139,25 @@ export default function Home() {
       <section>
         <SectionHeader desc="Explore Programs" title="Checkout our Courses" />
         <div className="flex my-4 flex-wrap items-center justify-center">
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
+          {courses.map((item, _) => {
+            return (
+              <>
+                <CourseCard
+                  desc={item.description}
+                  highlights={item.highlights}
+                  id={item.id}
+                  imgUrl={item.imgUrl}
+                  small={item.small}
+                  title={item.title}
+                />
+              </>
+            );
+          })}
         </div>
+      </section>
+      <section>
+        <SectionHeader desc="Tutors" title="Meet the Heroes" />
+        <div className="flex"></div>
       </section>
     </section>
   );
