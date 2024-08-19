@@ -5,7 +5,7 @@ import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
 import confetti from "canvas-confetti";
 import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/primitives";
+import { title, subtitle } from "@/components/primitives";
 import { GithubIcon, NextUILogo, SearchIcon } from "@/components/icons";
 import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
@@ -54,7 +54,7 @@ export default function Home() {
           <h1 className={title()}>Last&nbsp;</h1>
           <h1 className={title({ color: "violet" })}>Option&nbsp;</h1>
           <br />
-          <h1 className={title()}>Your Secure an IT Job</h1>
+          <h1 className={title()}>to Secure an IT Job</h1>
         </motion.span>
         <h2 className={subtitle({ class: "mt-4" })}>
           {text.map((el, i) => (
@@ -157,7 +157,13 @@ export default function Home() {
       </section>
       <section>
         <SectionHeader desc="Tutors" title="Meet the Heroes" />
-        <div className="flex"></div>
+        <div className="flex">
+          <div>
+            <h2 className="font-sans text-2xl">
+              Questions and Answers About Adacode Solutions and Bootcamp
+            </h2>
+          </div>
+        </div>
       </section>
     </section>
   );
