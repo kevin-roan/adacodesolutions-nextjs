@@ -15,6 +15,12 @@ import SectionHeader from "@/components/sectionHeader";
 import CourseCard from "@/components/courseCard";
 import courses from "@/contants/course";
 import { motion } from "framer-motion";
+import SectionCard from "@/components/sectionCard";
+import ContactUs from "./contact";
+import Testimonials from "./testimonials";
+import HeroCard from "@/components/heroCard";
+import SectionImage from "@/components/sectionImage";
+import CarouselCard from "@/components/carousel";
 
 export default function Home() {
   const text =
@@ -72,7 +78,6 @@ export default function Home() {
           ))}
         </h2>
       </div>
-
       <div className="flex gap-3">
         <button className="button " onClick={handleConfetti}>
           <span className="button-background ">
@@ -88,7 +93,6 @@ export default function Home() {
           Hire From Us
         </Link>
       </div>
-
       <div className="mt-8 flex gap-3 flex-wrap justify-center">
         <Snippet hideCopyButton hideSymbol variant="bordered">
           <span>
@@ -137,6 +141,12 @@ export default function Home() {
         </div>
       </div>
       <section>
+        <div className="lg:flex sm:flex-row gap-3">
+          <SectionImage />
+          <SectionImage />
+        </div>
+      </section>
+      <section>
         <SectionHeader desc="Explore Programs" title="Checkout our Courses" />
         <div className="flex my-4 flex-wrap items-center justify-center">
           {courses.map((item, _) => {
@@ -154,17 +164,27 @@ export default function Home() {
             );
           })}
         </div>
+        <SectionCard />
       </section>
       <section>
         <SectionHeader desc="Tutors" title="Meet the Heroes" />
-        <div className="flex">
-          <div>
-            <h2 className="font-sans text-2xl">
-              Questions and Answers About Adacode Solutions and Bootcamp
-            </h2>
-          </div>
+        <div className="lg:flex md:flex flex gap-3 flex-wrap justify-center">
+          <HeroCard />
+          <HeroCard />
+          <HeroCard />
         </div>
       </section>
+      <section>
+        <SectionHeader
+          desc="This is what our customers say"
+          title="Testimonials"
+        />
+        <Testimonials />
+      </section>
+      <section>
+        <ContactUs />
+      </section>
+      <CarouselCard />
     </section>
   );
 }
