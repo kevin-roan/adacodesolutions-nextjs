@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import "@/styles/gradientItems.css";
 import { Metadata, Viewport } from "next";
 import AnimatedCursor from "react-animated-cursor";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 
 import { Providers } from "./providers";

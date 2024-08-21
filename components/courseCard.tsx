@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 interface Props {
   desc: string;
-  highlights: [];
+  highlights: string[];
   id: string;
   imgUrl: string;
   small: string;

@@ -76,7 +76,7 @@ const Counter = ({
   suffix = "",
   trigger,
 }: {
-  startValue: number;
+  startValue?: number;
   endValue: number;
   duration: number;
   suffix: string;
@@ -90,7 +90,7 @@ const Counter = ({
     const incrementTime = Math.floor(duration / (endValue - startValue));
 
     const timer = setInterval(() => {
-      setCount((prevCount) => {
+      setCount((prevCount: number) => {
         const nextValue = prevCount + 1;
         if (nextValue >= endValue) {
           clearInterval(timer);
