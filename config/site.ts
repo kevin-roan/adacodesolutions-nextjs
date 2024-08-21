@@ -27,43 +27,35 @@ export const siteConfig = {
   ],
   navMenuItems: [
     {
-      label: "Profile",
+      label: "About Us",
       href: "/profile",
     },
     {
-      label: "Dashboard",
+      label: "Team",
       href: "/dashboard",
     },
     {
-      label: "Projects",
+      label: "Courses",
       href: "/projects",
     },
     {
-      label: "Team",
+      label: "FAQ",
       href: "/team",
     },
     {
-      label: "Calendar",
-      href: "/calendar",
+      label: "Contact Us",
+      href: "/contact",
     },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
+
     {
       label: "Logout",
       href: "/logout",
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/adacodesolutions/",
+    twitter: "https://instagram.com/adacodesolutions",
+    discord: "https://discord.gg/adacodesolutions",
+    sponsor: "https://www.adacodesolutions.com",
   },
 };

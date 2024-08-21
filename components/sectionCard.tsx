@@ -11,11 +11,11 @@ const SectionCard = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true);
-          observer.disconnect(); // Stop observing after it's in view
+          observer.disconnect();
         }
       },
       {
-        threshold: 0.1, // Adjust this to determine when the card is considered in view
+        threshold: 0.1,
       },
     );
 
@@ -29,34 +29,34 @@ const SectionCard = () => {
       }
     };
   }, []);
+
   return (
     <div
       ref={cardRef}
-      className="p-10 lg:m-4 rounded-2xl lg:flex md:flex  flex-wrap sm:flex-wrap gap-3 text-center justify-between 
-bg-gradient-to-t from-cyan-900 to-cyan-600
-      "
+      className="p-10 lg:m-4 rounded-2xl flex flex-wrap lg:flex-nowrap md:flex-nowrap gap-3 text-center justify-between 
+bg-gradient-to-r from-cyan-600 to-cyan-500"
       style={{
         // backgroundColor: Colors.primary,
         color: "white",
       }}
     >
-      <div className="w-50">
+      <div className="">
         <h2 className="font-extrabold text-4xl">
           <Counter endValue={110} duration={2000} suffix="+" trigger={inView} />
         </h2>
         <p>Students successfully completed course got </p>
       </div>
-      <div className="w-50">
+      <div className="">
         <h2 className="font-extrabold text-4xl">
           <Counter endValue={18} duration={2000} suffix="+" trigger={inView} />
         </h2>
         <p>Instructores are here to help you get a job into IT Sector</p>
       </div>
-      <div className="w-50">
+      <div className="">
         <h2 className="font-extrabold text-4xl">
           <Counter
-            endValue={99.99}
             duration={2000}
+            endValue={99.99}
             suffix="%"
             trigger={inView}
           />
@@ -75,6 +75,12 @@ const Counter = ({
   duration,
   suffix = "",
   trigger,
+}: {
+  startValue: number;
+  endValue: number;
+  duration: number;
+  suffix: string;
+  trigger: boolean;
 }) => {
   const [count, setCount] = useState(startValue);
 

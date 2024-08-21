@@ -80,13 +80,18 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
+          <Link
+            isExternal
+            aria-label="Twitter"
+            href={"https://instagram.com/adacodesolutions"}
+          >
             <TwitterIcon className="text-default-500" />
           </Link>
-          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+          <Link
+            isExternal
+            aria-label="Github"
+            href={"https://github.com/adacodesolutions"}
+          >
             <GithubIcon className="text-default-500" />
           </Link>
           <ThemeSwitch />
@@ -97,8 +102,8 @@ export const Navbar = () => {
             isExternal
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
+            href={"https://adacodesolutions.com"}
+            startContent={<>_</>}
             variant="flat"
           >
             Enroll Now

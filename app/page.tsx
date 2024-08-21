@@ -87,7 +87,7 @@ export default function Home() {
         <Link
           isExternal
           className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
+          href={"https://www.adacodesolutions.com"}
         >
           <SearchIcon size={20} />
           Hire From Us
@@ -125,14 +125,16 @@ export default function Home() {
               <Card>
                 <CardBody>
                   <Radio value="itbackground">
-                    <p>I Have IT Background </p>
+                    <p className="text-[1vmax]">I Have IT Background </p>
                   </Radio>
                 </CardBody>
               </Card>
               <Card>
                 <CardBody>
                   <Radio value="non-itbackground">
-                    <p>I Don&apos;t Have IT Background </p>
+                    <p className="text-[1vmax]">
+                      I Don&apos;t Have IT Background{" "}
+                    </p>
                   </Radio>
                 </CardBody>
               </Card>
