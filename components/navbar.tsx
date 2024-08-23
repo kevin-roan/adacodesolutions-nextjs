@@ -106,7 +106,8 @@ export const Navbar = () => {
             startContent={<>_</>}
             variant="flat"
           >
-            Enroll Now
+            <SearchIcon size={20} />
+            Hire From Us
           </Button>
         </NavbarItem>
       </NavbarContent>

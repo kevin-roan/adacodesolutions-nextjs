@@ -21,6 +21,9 @@ import Testimonials from "./testimonials";
 import HeroCard from "@/components/heroCard";
 import SectionImage from "@/components/sectionImage";
 import CarouselCard from "@/components/carousel";
+import Services from "./services/page";
+import WhyChooseUs from "./whychooseus/page";
+import PartnerLogos from "@/components/PartnerLogo";
 
 export default function Home() {
   const text =
@@ -47,8 +50,8 @@ export default function Home() {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-lg text-center justify-center">
+    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 ">
+      <div className="inline-block max-w-lg text-center justify-center ">
         <motion.span
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
@@ -57,10 +60,10 @@ export default function Home() {
             delay: 0.01,
           }}
         >
-          <h1 className={title()}>Last&nbsp;</h1>
-          <h1 className={title({ color: "violet" })}>Option&nbsp;</h1>
+          <h1 className={title()}>Build Your&nbsp;</h1>
+          <h1 className={title({ color: "violet" })}>Career&nbsp;</h1>
           <br />
-          <h1 className={title()}>to Secure an IT Job</h1>
+          <h1 className={title()}>With Adacode Solutions</h1>
         </motion.span>
         <h2 className={subtitle({ class: "mt-4" })}>
           {text.map((el, i) => (
@@ -78,20 +81,12 @@ export default function Home() {
           ))}
         </h2>
       </div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 ">
         <button className="button " onClick={handleConfetti}>
-          <span className="button-background ">
+          <span className="button-background">
             <h3 className="button-text">Enroll Now </h3>
           </span>
         </button>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={"https://www.adacodesolutions.com"}
-        >
-          <SearchIcon size={20} />
-          Hire From Us
-        </Link>
       </div>
       <div className="mt-8 flex gap-3 flex-wrap justify-center">
         <Snippet hideCopyButton hideSymbol variant="bordered">
@@ -125,14 +120,14 @@ export default function Home() {
               <Card>
                 <CardBody>
                   <Radio value="itbackground">
-                    <p className="text-[1vmax]">I Have IT Background </p>
+                    <p className="text-[1rem]">I Have IT Background </p>
                   </Radio>
                 </CardBody>
               </Card>
               <Card>
                 <CardBody>
                   <Radio value="non-itbackground">
-                    <p className="text-[1vmax]">
+                    <p className="text-[1rem]">
                       I Don&apos;t Have IT Background{" "}
                     </p>
                   </Radio>
@@ -143,10 +138,10 @@ export default function Home() {
         </div>
       </div>
       <section>
-        <div className="lg:flex sm:flex-row gap-3">
-          <SectionImage />
-          <SectionImage />
-        </div>
+        <PartnerLogos />
+      </section>
+      <section>
+        <WhyChooseUs />
       </section>
       <section>
         <SectionHeader desc="Explore Programs" title="Checkout our Courses" />

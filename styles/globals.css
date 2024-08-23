@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+}
+
+body {
+  font-family: var(--font-rubik);
+}
+
+/* Marquee.module.css */
+.marqueeWrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  gap: 2rem;
+  white-space: nowrap;
+  width: 80vw;
+}

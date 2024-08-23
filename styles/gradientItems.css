@@ -1,9 +1,10 @@
 .button {
-  padding: 0 1rem;
+  /* padding: 0 3rem; */
   position: relative;
   display: inline-flex;
   min-width: 120px;
   min-height: 32px;
+  padding: 20px 5rem;
 }
 
 .button-text {

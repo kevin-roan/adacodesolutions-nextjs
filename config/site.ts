@@ -5,10 +5,6 @@ export const siteConfig = {
   description: "No.1 Software Training Institute in Kozhikode",
   navItems: [
     {
-      label: "Home",
-      href: "/",
-    },
-    {
       label: "Courses",
       href: "/docs",
     },

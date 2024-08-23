@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["entrielevate.com"],
+    domains: [
+      "entrielevate.com",
+      "cdn-icons-png.flaticon.com",
+      "beforeifly.com",
+    ],
   },
 };
 

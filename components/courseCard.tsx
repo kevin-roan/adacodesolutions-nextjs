@@ -31,7 +31,7 @@ export default function CourseCard({
       }}
       whileTap={{ scale: 0.9 }}
     >
-      <div className="border-1 border-[#cacaca] m-3 rounded-2xl w-[35vh] shadow-md max-h-[60vh] overflow-auto">
+      <div className="border-[0.5px] border-[white] m-3 rounded-2xl w-[35vh] shadow-md max-h-[60vh] overflow-auto">
         <img alt="Course Banner" className="rounded-t-2xl" src={imgUrl} />
         <div className=" p-4">
           <div className="">
