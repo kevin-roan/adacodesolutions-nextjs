@@ -24,6 +24,7 @@ import CarouselCard from "@/components/carousel";
 import Services from "./services/page";
 import WhyChooseUs from "./whychooseus/page";
 import PartnerLogos from "@/components/PartnerLogo";
+import FormModal from "@/components/formModal";
 
 export default function Home() {
   const text =
