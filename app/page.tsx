@@ -25,6 +25,7 @@ import Services from "./services/page";
 import WhyChooseUs from "./whychooseus/page";
 import PartnerLogos from "@/components/PartnerLogo";
 import FormModal from "@/components/formModal";
+import HowItWorks from "./howitworks/page";
 
 export default function Home() {
   const text =
@@ -140,6 +141,15 @@ export default function Home() {
       </div>
       <section>
         <PartnerLogos />
+        <div className="text-center">
+          <span className="absolute mx-auto py-4 flex border w-fit bg-gradient-to-r blur-xl from-slate-500 via-teal-500 to-slate-500 bg-clip-text text-4xl box-content font-extrabold text-transparent text-center select-none">
+            How it Works
+          </span>
+          <h1 className="relative top-0 w-fit h-auto py-4 justify-center flex bg-gradient-to-r items-center from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-4xl font-extrabold text-transparent text-center select-auto">
+            How it Works
+          </h1>
+        </div>
+        <HowItWorks />
       </section>
       <section>
         <WhyChooseUs />
@@ -166,10 +176,15 @@ export default function Home() {
       </section>
       <section>
         <SectionHeader desc="Tutors" title="Meet the Heroes" />
-        <div className="lg:flex md:flex flex gap-3 flex-wrap justify-center">
-          <HeroCard />
-          <HeroCard />
-          <HeroCard />
+        <div className="bg-white my-3">
+          <motion.span>
+            <h3 className="text-2xl">Team Adacode</h3>
+          </motion.span>
+          <Image
+            src="/herobanner.png"
+            alt="Our Heros"
+            className="border-none rounded-s pt-[10rem]"
+          />
         </div>
       </section>
       <section>
