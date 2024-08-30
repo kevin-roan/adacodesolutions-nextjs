@@ -26,6 +26,7 @@ import WhyChooseUs from "./whychooseus/page";
 import PartnerLogos from "@/components/PartnerLogo";
 import FormModal from "@/components/formModal";
 import HowItWorks from "./howitworks/page";
+import MeetOurHeroes from "@/components/meetourHeroes";
 
 export default function Home() {
   const text =
@@ -149,10 +150,10 @@ export default function Home() {
             How it Works
           </h1>
         </div>
-        <HowItWorks />
-      </section>
-      <section>
-        <WhyChooseUs />
+        <div className="flex ">
+          <HowItWorks />
+          <WhyChooseUs />
+        </div>
       </section>
       <section>
         <SectionHeader desc="Explore Programs" title="Checkout our Courses" />
@@ -176,16 +177,7 @@ export default function Home() {
       </section>
       <section>
         <SectionHeader desc="Tutors" title="Meet the Heroes" />
-        <div className="bg-white my-3">
-          <motion.span>
-            <h3 className="text-2xl">Team Adacode</h3>
-          </motion.span>
-          <Image
-            src="/herobanner.png"
-            alt="Our Heros"
-            className="border-none rounded-s pt-[10rem]"
-          />
-        </div>
+        <MeetOurHeroes />
       </section>
       <section>
         <SectionHeader

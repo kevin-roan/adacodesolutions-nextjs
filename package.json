@@ -40,7 +40,9 @@
     "react-animated-cursor": "^2.11.2",
     "react-dom": "18.3.1",
     "react-icons": "^5.3.0",
-    "react-multi-carousel": "^2.8.5"
+    "react-multi-carousel": "^2.8.5",
+    "react-parallax": "^3.5.1",
+    "react-stars": "^2.2.5"
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.6.4",
