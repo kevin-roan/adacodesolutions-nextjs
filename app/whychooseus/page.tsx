@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const WhyChooseUs = () => {
   return (
-    <div>
+    <div className=" flex items-center flex-col lg:w-[50%] sm:w-full md:w-full">
       <motion.div
         initial={{ opacity: 0, scale: 1 }}
         whileInView={{ opacity: 1, scale: 1.4, rotate: [10, 20] }}
@@ -13,11 +13,11 @@ const WhyChooseUs = () => {
         viewport={{ once: true }}
       >
         <Image
-          width={900}
-          height={900}
-          src="/floatingcard.png"
           alt="section hero"
           className="my-4"
+          src="/floatingcard.png"
+          height={400}
+          width={400}
         />
       </motion.div>
       <div className="text-center gap-3 flex-row ">
@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
           <span className="absolute mx-auto py-4 flex border w-fit bg-gradient-to-r blur-xl from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-6xl box-content font-extrabold text-transparent text-center select-none">
             adkjdakdjdkj
           </span>
-          <p className="mt-2">
+          <p className="mt-2 text-wrap">
             In publishing and graphic design, Lorem ipsum is a placeholder text
             commonly used to demonstrate the visual form of a document or a
             typeface without relying on meaningful content. Lorem ipsum may be

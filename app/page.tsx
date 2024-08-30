@@ -150,7 +150,7 @@ export default function Home() {
             How it Works
           </h1>
         </div>
-        <div className="flex ">
+        <div className="flex flex-row flex-wrap items-center justify-center gap-10">
           <HowItWorks />
           <WhyChooseUs />
         </div>
