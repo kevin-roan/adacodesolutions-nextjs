@@ -40,7 +40,6 @@ export default function CourseCard({
             </h3>
             <p className="text-sm text-primary">{small}</p>
           </div>
-          <p className="text-sm">{desc}</p>
           <Divider className="my-4" />
           <div className="flex items-center gap-2 m-2">
             <SiProgress />

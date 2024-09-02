@@ -27,6 +27,7 @@ import PartnerLogos from "@/components/PartnerLogo";
 import FormModal from "@/components/formModal";
 import HowItWorks from "./howitworks/page";
 import MeetOurHeroes from "@/components/meetourHeroes";
+import TestCard from "@/components/testCard";
 
 export default function Home() {
   const text =
@@ -160,7 +161,7 @@ export default function Home() {
         <div className="flex my-4 flex-wrap items-center justify-center">
           {courses.map((item, _) => {
             return (
-              <>
+              /*
                 <CourseCard
                   desc={item.description}
                   highlights={item.highlights}
@@ -168,8 +169,16 @@ export default function Home() {
                   imgUrl={item.imgUrl}
                   small={item.small}
                   title={item.title}
-                />
-              </>
+                /> */
+              <TestCard
+                key={item.id}
+                desc={item.description}
+                highlights={item.highlights}
+                id={item.id}
+                imgUrl={item.imgUrl}
+                small={item.small}
+                title={item.title}
+              />
             );
           })}
         </div>

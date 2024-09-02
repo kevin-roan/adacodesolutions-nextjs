@@ -8,14 +8,15 @@ const WhyChooseUs = () => {
     <div className=" flex items-center flex-col lg:w-[50%] sm:w-full md:w-full">
       <motion.div
         initial={{ opacity: 0, scale: 1 }}
-        whileInView={{ opacity: 1, scale: 1.4, rotate: [10, 20] }}
+        // whileInView={{ opacity: 1, scale: 1.4, rotate: [10, 20] }}
+        whileInView={{ opacity: 1, scale: 1.4 }}
         transition={{ duration: 0.5, delay: 0.4 }}
         viewport={{ once: true }}
       >
         <Image
           alt="section hero"
           className="my-4"
-          src="/floatingcard.png"
+          src="/floatingcard.jpg"
           height={400}
           width={400}
         />

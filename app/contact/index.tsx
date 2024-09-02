@@ -21,7 +21,7 @@ const ContactUs = () => {
           <span className="" style={{ color: Colors.primary }}>
             Get Expert Advice
           </span>
-          : Register for your free consolutation Now!
+          : Register for your free consultation Now!
         </h3>
         <form className="flex-row ">
           <Input
