@@ -11,6 +11,7 @@ import { fontPoppins } from "@/config/fonts";
 import { fontMono } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
+import UserFormModel from "@/components/userformModal";
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +47,7 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
+            <UserFormModel />
             <Navbar />
             <AnimatedCursor />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">

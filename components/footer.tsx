@@ -1,23 +1,32 @@
 import React from "react";
-import { Logo } from "./icons";
+import { InstagramLogo, Logo } from "./icons";
 import { Divider } from "@nextui-org/divider";
 import { motion } from "framer-motion";
+import {
+  FaPinterestSquare,
+  FaLinkedin,
+  FaFacebook,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="w-full h-[10vh] ">
       <Divider />
-      <div className="flex justify-between mx-[10vmax]">
+      <div className="flex justify-between flex-wrap mx-10">
         <div>
           <h3 className="font-bold">Location</h3>
           <Divider />
           <iframe
-            className="rounded-2xl py-3"
+            className="py-3 flex flex-shrink"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15653.941129691071!2d75.791888!3d11.225668!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba659378f7f9911%3A0x62ff59d7aabdab76!2sAdacode%20solutions!5e0!3m2!1sen!2sin!4v1725358408194!5m2!1sen!2sin"
-            width="360"
-            height="180"
             allowfullscreen=""
+            width="240"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
@@ -32,7 +41,7 @@ const Footer = () => {
             <li>UI/UX Development</li>
           </ul>
         </div>
-        <div>
+        <div className="">
           <h3 className="font-bold">Our Courses</h3>
           <Divider />
           <ul>
@@ -46,14 +55,20 @@ const Footer = () => {
         </div>
       </div>
       <Divider />
-      <div className="bottom flex justify-between mx-10 py-4">
-        <h3>Adacode Solutions</h3>
+      <div className="bottom flex justify-between mx-10 py-4 items-center">
+        <h3 className="text-sm">Adacode Solutions</h3>
         <div className="flex gap-4 mx-4">
-          <Image width={20} height={20} src="/instagramicon.png" />
-          <Image width={20} height={20} src="/linkedinicon.png" />
-          <Image width={20} height={20} src="/youtubeicon.png" />
+          <Link href="https://linkedin/in/adacodesolutions">
+            <FaLinkedinIn />
+          </Link>
+          <Link href="https://instagram.com/adacodesolutions">
+            <FaInstagram />
+          </Link>
+          <Link href="https://youtube.com/c/adacodesolutions">
+            <FaYoutube />
+          </Link>
         </div>
-        <h3>&copy; All rights reserved</h3>
+        <h3 className="text-small">&copy; All rights reserved</h3>
       </div>
     </footer>
   );

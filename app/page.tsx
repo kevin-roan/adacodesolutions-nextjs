@@ -28,13 +28,17 @@ import FormModal from "@/components/formModal";
 import HowItWorks from "./howitworks/page";
 import MeetOurHeroes from "@/components/meetourHeroes";
 import TestCard from "@/components/testCard";
+import { useDisclosure } from "@nextui-org/modal";
+import UserFormModel from "@/components/userformModal";
 
 export default function Home() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const text =
     "Learn Data Science, Machine Leaning , Artificial Intelligence , Mobile and Web app Development with Industry Experts.".split(
       " ",
     );
   const handleConfetti = () => {
+    onOpen();
     confetti({
       particleCount: 100,
       startVelocity: 30,
@@ -91,6 +95,7 @@ export default function Home() {
             <h3 className="button-text">Enroll Now </h3>
           </span>
         </button>
+        <UserFormModel isOpen={isOpen} onOpenChange={onOpenChange} />
       </div>
       <div className="mt-8 flex gap-3 flex-wrap justify-center">
         <Snippet hideCopyButton hideSymbol variant="bordered">
