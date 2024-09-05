@@ -14,11 +14,13 @@ import { Input } from "@nextui-org/input";
 import { ToastContainer, toast } from "react-toastify";
 import { Select, SelectOptions, SelectItem } from "@nextui-org/select";
 import "react-toastify/dist/ReactToastify.css";
+import { createNewStudentEntry } from "@/server/firebase/students/addNewStudent";
 
 type Inputs = {
   email: string;
   phone: string;
   name: string;
+  survey: string;
 };
 
 type UserformModelProps = {
@@ -47,6 +49,17 @@ const UserFormModel = ({ isOpen, onOpenChange }: UserformModelProps) => {
   const notify = () => {
     toast("Our Team will contact you shortly");
   };
+  const handleNewStudent = () => {
+    const studentData = {
+      studentName: "kevinroan",
+      phone: "33303339",
+      email: "adjdkajdkj",
+      survey: "adakjdfakjd",
+    };
+    setTimeout(() => {
+      createNewStudentEntry(studentData);
+    }, 3000);
+  };
 
   return (
     <div>
@@ -62,7 +75,7 @@ const UserFormModel = ({ isOpen, onOpenChange }: UserformModelProps) => {
         pauseOnHover
         theme="dark"
       />
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form>
         <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
           <ModalContent>
             {(onClose) => (
@@ -83,7 +96,11 @@ const UserFormModel = ({ isOpen, onOpenChange }: UserformModelProps) => {
                     {...register("phone")}
                     required
                   />
-                  <Select label="Where did you heard about us" size="sm">
+                  <Select
+                    label="Where did you heard about us"
+                    name="survey"
+                    size="sm"
+                  >
                     {selectOptions.map((item, index) => (
                       <SelectItem key={index}>{item}</SelectItem>
                     ))}
@@ -93,7 +110,7 @@ const UserFormModel = ({ isOpen, onOpenChange }: UserformModelProps) => {
                   <Button color="danger" variant="light" onClick={onClose}>
                     Close
                   </Button>
-                  <Button color="danger" onClick={notify}>
+                  <Button color="danger" onClick={handleSubmit(onSubmit)}>
                     Get Started
                   </Button>
                 </ModalFooter>

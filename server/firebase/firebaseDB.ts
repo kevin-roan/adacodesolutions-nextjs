@@ -1,5 +1,5 @@
-import { app } from "./";
 import { getFirestore } from "firebase/firestore";
+import { app } from "./firebaseHelper";
 
 const db = getFirestore(app);
 
