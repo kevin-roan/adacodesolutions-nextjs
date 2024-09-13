@@ -3,6 +3,10 @@ import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { Link } from "@nextui-org/link";
 import { Image } from "@nextui-org/image";
+import { Button } from "@nextui-org/button";
+import { useState } from "react";
+import { useDisclosure } from "@nextui-org/modal";
+import UserFormModel from "./userformModal";
 
 interface Props {
   desc: string;
@@ -14,6 +18,28 @@ interface Props {
 }
 
 const TestCard = ({ desc, highlights, id, imgUrl, small, title }: Props) => {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const CourseDownloader = (filename: string) => {
+    const fileUrlRegex = /^[a-zA-Z0-9-]+$/;
+    if (!fileUrlRegex.test(filename)) {
+      console.error("Invalid filename format");
+      return;
+    }
+    const fullFilename = `/courses/${filename}.pdf`;
+    const fileUrl = fullFilename;
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = "coursedetails.pdf";
+    link.click();
+  };
+
+  const handleClick = (filename: string) => {
+    onOpen();
+    setTimeout(() => {
+      CourseDownloader(filename);
+    }, 2000);
+  };
+
   return (
     <Card className="max-w-[300px] m-3">
       <CardHeader className="flex gap-3">
@@ -26,9 +52,8 @@ const TestCard = ({ desc, highlights, id, imgUrl, small, title }: Props) => {
         />
       </CardHeader>
       <Divider />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center bg-black border-r-1 border-l-1">
         <p className="text-md">{title}</p>
-        <p className="text-small text-default-500">nextui.org</p>
       </div>
       <Divider />
       <CardBody>
@@ -36,13 +61,8 @@ const TestCard = ({ desc, highlights, id, imgUrl, small, title }: Props) => {
       </CardBody>
       <Divider />
       <CardFooter>
-        <Link
-          isExternal
-          showAnchorIcon
-          href="https://github.com/nextui-org/nextui"
-        >
-          Visit source code on GitHub.
-        </Link>
+        <Button onClick={() => handleClick(id)}>Download Brochure</Button>
+        <UserFormModel isOpen={isOpen} onOpenChange={onOpenChange} />
       </CardFooter>
     </Card>
   );

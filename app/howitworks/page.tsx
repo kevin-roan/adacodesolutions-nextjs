@@ -15,14 +15,15 @@ const HowItWorks = () => {
           <div className="flex items-center justify-center gap-8 w-full max-w-sm">
             <div className="flex items-center gap-3.5 bg-indigo-50 p-3.5 rounded-xl relative z-10 border border-indigo-600 w-full">
               <div className="rounded-lg bg-indigo-600 flex items-center justify-center">
-                <span className="text-white p-3">{/* SVG here */}</span>
+                <img src="/gifs/spanimage1.gif" width={100} height={100} />
               </div>
               <div className="flex items-start rounded-md justify-center flex-col">
                 <h6 className="text-base font-semibold text-black mb-0.5">
-                  You enroll to our course
+                  Personalized 1-on-1 Classes
                 </h6>
                 <p className="text-xs font-normal text-gray-500">
-                  This is the first step in our program
+                  Begin your journey with tailored 1-on-1 sessions to master
+                  core concepts and skills directly from experts.
                 </p>
               </div>
             </div>
@@ -39,14 +40,15 @@ const HowItWorks = () => {
           <div className="flex items-center justify-center gap-8 w-full max-w-sm">
             <div className="flex items-center gap-3.5 bg-gray-50 p-3.5 rounded-xl relative z-10 border border-gray-50 w-full">
               <div className="rounded-lg bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-600 p-3">{/* SVG here */}</span>
+                <img src="/gifs/spanimage3.gif" width={100} height={100} />
               </div>
               <div className="flex items-start rounded-md justify-center flex-col">
                 <h6 className="text-base font-semibold text-black mb-0.5">
-                  You will work on Real World projects
+                  Skill Enhancement
                 </h6>
                 <p className="text-xs font-normal text-gray-500">
-                  Meanwhile learning technologies and Practising for Interviews
+                  Refine your aptitude and English proficiency through targeted
+                  practice sessions designed to boost your performance.
                 </p>
               </div>
             </div>
@@ -63,15 +65,15 @@ const HowItWorks = () => {
           <div className="flex items-center justify-center gap-8 w-full max-w-sm">
             <div className="flex items-center gap-3.5 bg-gray-50 p-3.5 rounded-xl relative z-10 border border-gray-50 w-full">
               <div className="rounded-lg bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-600 p-3">{/* SVG here */}</span>
+                <img src="/gifs/spanimage5.gif" height={100} width={100} />
               </div>
               <div className="flex items-start rounded-md justify-center flex-col">
                 <h6 className="text-base font-semibold text-black mb-0.5">
-                  Practising for Interview
+                  Interview Preparation
                 </h6>
                 <p className="text-xs font-normal text-gray-500">
-                  You will thoughly learn best practices for the interview and
-                  salary negotiations
+                  Benefit from Adacode's dedicated scheduling of job interviews,
+                  with personalized guidance to excel in each opportunity.
                 </p>
               </div>
             </div>
@@ -88,14 +90,15 @@ const HowItWorks = () => {
           <div className="flex items-center justify-center gap-8 w-full max-w-sm">
             <div className="flex items-center gap-3.5 bg-gray-50 p-3.5 rounded-xl relative z-10 border border-gray-50 w-full">
               <div className="rounded-lg bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-600 p-3">{/* SVG here */}</span>
+                <img src="/gifs/spanimage2.png" width={100} height={100} />
               </div>
               <div className="flex items-start rounded-md justify-center flex-col">
                 <h6 className="text-base font-semibold text-black mb-0.5">
-                  Interview and Placement
+                  Successful Placement
                 </h6>
                 <p className="text-xs font-normal text-gray-500">
-                  Congrats, Your become a software developer with Adacode!
+                  Secure your ideal job as our comprehensive support helps you
+                  transition seamlessly from training to employment.
                 </p>
               </div>
             </div>

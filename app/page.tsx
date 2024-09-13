@@ -128,14 +128,14 @@ export default function Home() {
             <div className="flex gap-3">
               <Card>
                 <CardBody>
-                  <Radio value="itbackground">
+                  <Radio value="itbackground" onClick={() => onOpen()}>
                     <p className="text-[1rem]">I Have IT Background </p>
                   </Radio>
                 </CardBody>
               </Card>
               <Card>
                 <CardBody>
-                  <Radio value="non-itbackground">
+                  <Radio value="non-itbackground" onClick={() => onOpen()}>
                     <p className="text-[1rem]">
                       I Don&apos;t Have IT Background{" "}
                     </p>
@@ -166,15 +166,6 @@ export default function Home() {
         <div className="flex my-4 flex-wrap items-center justify-center">
           {courses.map((item, _) => {
             return (
-              /*
-                <CourseCard
-                  desc={item.description}
-                  highlights={item.highlights}
-                  id={item.id}
-                  imgUrl={item.imgUrl}
-                  small={item.small}
-                  title={item.title}
-                /> */
               <TestCard
                 key={item.id}
                 desc={item.description}
@@ -187,7 +178,6 @@ export default function Home() {
             );
           })}
         </div>
-        <SectionCard />
       </section>
       <section>
         <SectionHeader desc="Tutors" title="Meet the Heroes" />

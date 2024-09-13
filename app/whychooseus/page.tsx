@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
         <Image
           alt="section hero"
           className="my-4"
-          src="/floatingcard.jpg"
+          src="/sectionImage.png"
           height={400}
           width={400}
         />
@@ -33,10 +33,11 @@ const WhyChooseUs = () => {
             adkjdakdjdkj
           </span>
           <p className="mt-2 text-wrap">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content. Lorem ipsum may be
-            used as a placeholder before the final copy is
+            Adacode Solutions stands out by providing top-tier software training
+            in data science, full stack development, app development, and IoT,
+            all while maintaining the lowest fees in the market. Our
+            comprehensive programs are designed to equip you with cutting-edge
+            skills and practical knowledge.
           </p>
         </motion.div>
       </div>

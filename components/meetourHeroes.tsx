@@ -6,9 +6,9 @@ import { Parallax } from "react-parallax";
 const MeetOurHeroes = () => {
   return (
     <Parallax
-      bgImage="https://img.freepik.com/premium-vector/hand-teamwork-digital-low-poly-background-friendship-support-success-business-team-symbol_252172-26.jpg"
+      bgImage="/parallaxImage.png"
       className="rounded-tr-3xl rounded-tl-3xl my-[10px]"
-      strength={300}
+      strength={1000}
     >
       <div className="h-[30max] w-full flex justify-center items-center">
         <motion.div
