@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -15,7 +16,12 @@ const HowItWorks = () => {
           <div className="flex items-center justify-center gap-8 w-full max-w-sm">
             <div className="flex items-center gap-3.5 bg-indigo-50 p-3.5 rounded-xl relative z-10 border border-indigo-600 w-full">
               <div className="rounded-lg bg-indigo-600 flex items-center justify-center">
-                <img src="/gifs/spanimage1.gif" width={100} height={100} />
+                <img
+                  alt="span"
+                  height={100}
+                  src="/gifs/spanimage1.gif"
+                  width={100}
+                />
               </div>
               <div className="flex items-start rounded-md justify-center flex-col">
                 <h6 className="text-base font-semibold text-black mb-0.5">
@@ -40,7 +46,12 @@ const HowItWorks = () => {
           <div className="flex items-center justify-center gap-8 w-full max-w-sm">
             <div className="flex items-center gap-3.5 bg-gray-50 p-3.5 rounded-xl relative z-10 border border-gray-50 w-full">
               <div className="rounded-lg bg-gray-200 flex items-center justify-center">
-                <img src="/gifs/spanimage3.gif" width={100} height={100} />
+                <img
+                  alt="span"
+                  height={100}
+                  src="/gifs/spanimage3.gif"
+                  width={100}
+                />
               </div>
               <div className="flex items-start rounded-md justify-center flex-col">
                 <h6 className="text-base font-semibold text-black mb-0.5">
@@ -65,15 +76,21 @@ const HowItWorks = () => {
           <div className="flex items-center justify-center gap-8 w-full max-w-sm">
             <div className="flex items-center gap-3.5 bg-gray-50 p-3.5 rounded-xl relative z-10 border border-gray-50 w-full">
               <div className="rounded-lg bg-gray-200 flex items-center justify-center">
-                <img src="/gifs/spanimage5.gif" height={100} width={100} />
+                <img
+                  alt="span"
+                  height={100}
+                  src="/gifs/spanimage5.gif"
+                  width={100}
+                />
               </div>
               <div className="flex items-start rounded-md justify-center flex-col">
                 <h6 className="text-base font-semibold text-black mb-0.5">
                   Interview Preparation
                 </h6>
                 <p className="text-xs font-normal text-gray-500">
-                  Benefit from Adacode's dedicated scheduling of job interviews,
-                  with personalized guidance to excel in each opportunity.
+                  Benefit from Adacode&apos;s dedicated scheduling of job
+                  interviews, with personalized guidance to excel in each
+                  opportunity.
                 </p>
               </div>
             </div>
@@ -90,7 +107,12 @@ const HowItWorks = () => {
           <div className="flex items-center justify-center gap-8 w-full max-w-sm">
             <div className="flex items-center gap-3.5 bg-gray-50 p-3.5 rounded-xl relative z-10 border border-gray-50 w-full">
               <div className="rounded-lg bg-gray-200 flex items-center justify-center">
-                <img src="/gifs/spanimage2.png" width={100} height={100} />
+                <img
+                  alt="span"
+                  height={100}
+                  src="/gifs/spanimage2.png"
+                  width={100}
+                />
               </div>
               <div className="flex items-start rounded-md justify-center flex-col">
                 <h6 className="text-base font-semibold text-black mb-0.5">

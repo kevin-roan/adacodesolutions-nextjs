@@ -1,10 +1,8 @@
 import React from "react";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
-import { Link } from "@nextui-org/link";
 import { Image } from "@nextui-org/image";
 import { Button } from "@nextui-org/button";
-import { useState } from "react";
 import { useDisclosure } from "@nextui-org/modal";
 import UserFormModel from "./userformModal";
 

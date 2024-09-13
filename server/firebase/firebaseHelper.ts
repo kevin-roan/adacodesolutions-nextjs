@@ -1,3 +1,5 @@
+"use client";
+
 import { initializeApp } from "firebase/app";
 import "firebase/installations";
 import { getAnalytics } from "firebase/analytics";
@@ -11,9 +13,8 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
-console.log(firebaseConfig, "asdad");
 
-console.log("firebase connection successfull", firebaseConfig);
+// console.log("firebase connection successfull", firebaseConfig);
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);

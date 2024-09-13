@@ -1,42 +1,40 @@
 "use client";
-import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
-import confetti from "canvas-confetti";
-import { siteConfig } from "@/config/site";
+import { useState, useEffect } from "react";
+// import confetti from "canvas-confetti";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon, NextUILogo, SearchIcon } from "@/components/icons";
-import { Button } from "@nextui-org/button";
-import { Image } from "@nextui-org/image";
 import { Card, CardBody } from "@nextui-org/card";
 import { RadioGroup, Radio } from "@nextui-org/radio";
 import SectionHeader from "@/components/sectionHeader";
-import CourseCard from "@/components/courseCard";
 import courses from "@/contants/course";
 import { motion } from "framer-motion";
-import SectionCard from "@/components/sectionCard";
 import ContactUs from "./contact";
 import Testimonials from "./testimonials";
-import HeroCard from "@/components/heroCard";
-import SectionImage from "@/components/sectionImage";
 import CarouselCard from "@/components/carousel";
-import Services from "./services/page";
 import WhyChooseUs from "./whychooseus/page";
 import PartnerLogos from "@/components/PartnerLogo";
-import FormModal from "@/components/formModal";
 import HowItWorks from "./howitworks/page";
 import MeetOurHeroes from "@/components/meetourHeroes";
 import TestCard from "@/components/testCard";
 import { useDisclosure } from "@nextui-org/modal";
 import UserFormModel from "@/components/userformModal";
+import dynamic from "next/dynamic";
 
 export default function Home() {
+  const [confetti, setConfetti] = useState<any>(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const text =
     "Learn Data Science, Machine Leaning , Artificial Intelligence , Mobile and Web app Development with Industry Experts.".split(
       " ",
     );
+
+  useEffect(() => {
+    // Dynamically import canvas-confetti only on the client side
+    import("canvas-confetti").then((module) => {
+      setConfetti(() => module.default);
+    });
+  }, []);
   const handleConfetti = () => {
     onOpen();
     confetti({
@@ -84,7 +82,7 @@ export default function Home() {
                 delay: i / 10,
               }}
             >
-              {el}{" "}
+              {el}
             </motion.span>
           ))}
         </h2>

@@ -1,17 +1,6 @@
 import React from "react";
-import { InstagramLogo, Logo } from "./icons";
 import { Divider } from "@nextui-org/divider";
-import { motion } from "framer-motion";
-import {
-  FaPinterestSquare,
-  FaLinkedin,
-  FaFacebook,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
-import Image from "next/image";
+import { FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 
 const Footer = () => {
@@ -23,12 +12,12 @@ const Footer = () => {
           <h3 className="font-bold">Location</h3>
           <Divider />
           <iframe
+            title="location"
             className="py-3 flex flex-shrink"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15653.941129691071!2d75.791888!3d11.225668!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba659378f7f9911%3A0x62ff59d7aabdab76!2sAdacode%20solutions!5e0!3m2!1sen!2sin!4v1725358408194!5m2!1sen!2sin"
-            allowfullscreen=""
             width="240"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
         <div>

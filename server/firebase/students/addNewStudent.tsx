@@ -1,3 +1,4 @@
+"use client";
 import { collection, serverTimestamp, addDoc } from "firebase/firestore";
 
 import { db } from "../firebaseDB";
@@ -15,7 +16,6 @@ const createNewStudentEntry = async ({
   email,
   survey,
 }: StudentDataProps) => {
-  console.log("Got student data", name);
   try {
     const docRef = await addDoc(collection(db, "students"), {
       createdAt: serverTimestamp(),
