@@ -2,7 +2,6 @@
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
 import { useState, useEffect } from "react";
-// import confetti from "canvas-confetti";
 import { title, subtitle } from "@/components/primitives";
 import { Card, CardBody } from "@nextui-org/card";
 import { RadioGroup, Radio } from "@nextui-org/radio";
@@ -19,10 +18,9 @@ import MeetOurHeroes from "@/components/meetourHeroes";
 import TestCard from "@/components/testCard";
 import { useDisclosure } from "@nextui-org/modal";
 import UserFormModel from "@/components/userformModal";
-import dynamic from "next/dynamic";
 
 export default function Home() {
-  const [confetti, setConfetti] = useState<any>(null);
+  const [Confetti, setConfetti] = useState<any>(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const text =
     "Learn Data Science, Machine Leaning , Artificial Intelligence , Mobile and Web app Development with Industry Experts.".split(
@@ -30,29 +28,34 @@ export default function Home() {
     );
 
   useEffect(() => {
-    // Dynamically import canvas-confetti only on the client side
-    import("canvas-confetti").then((module) => {
-      setConfetti(() => module.default);
-    });
+    const loadConfetti = async () => {
+      const confettiModule = await import("canvas-confetti");
+
+      setConfetti(() => confettiModule.default);
+    };
+
+    loadConfetti();
   }, []);
+
   const handleConfetti = () => {
-    onOpen();
-    confetti({
-      particleCount: 100,
-      startVelocity: 30,
-      spread: 360,
-      origin: {
-        x: Math.random(),
-        // since they fall down, start a bit higher than random
-        y: Math.random() - 0.2,
-      },
-    });
-    confetti({
-      particleCount: 100,
-      angle: 120,
-      spread: 55,
-      origin: { x: 1 },
-    });
+    if (Confetti) {
+      onOpen();
+      Confetti({
+        particleCount: 100,
+        startVelocity: 30,
+        spread: 360,
+        origin: {
+          x: Math.random(),
+          y: Math.random() - 0.2,
+        },
+      });
+      Confetti({
+        particleCount: 100,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+      });
+    }
   };
 
   return (

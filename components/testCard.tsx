@@ -8,7 +8,7 @@ import UserFormModel from "./userformModal";
 
 interface Props {
   desc: string;
-  highlights: string[];
+  highlights?: string[];
   id: string;
   imgUrl: string;
   small: string;
