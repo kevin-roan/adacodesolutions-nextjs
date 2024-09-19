@@ -1,4 +1,5 @@
 "use client";
+// TODO; Code spliting, ssr improvements seo keywords
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
 import { useState, useEffect } from "react";
@@ -23,14 +24,14 @@ export default function Home() {
   const [Confetti, setConfetti] = useState<any>(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const text =
-    "Learn Data Science, Machine Leaning , Artificial Intelligence , Mobile and Web app Development with Industry Experts.".split(
-      " ",
+    "Learn Data Science, Artificial Intelligence , Mobile and Web app Development with Industry Experts.".split(
+      ``,
+      // escape character => because " " doesn't work
     );
 
   useEffect(() => {
     const loadConfetti = async () => {
       const confettiModule = await import("canvas-confetti");
-
       setConfetti(() => confettiModule.default);
     };
 
@@ -179,6 +180,7 @@ export default function Home() {
             );
           })}
         </div>
+        <div className="flex my-4 flex-wrap items-center justify-center"></div>
       </section>
       <section>
         <SectionHeader desc="Tutors" title="Meet the Heroes" />

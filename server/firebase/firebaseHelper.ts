@@ -2,7 +2,6 @@
 
 import { initializeApp } from "firebase/app";
 import "firebase/installations";
-import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -17,6 +16,5 @@ const firebaseConfig = {
 // console.log("firebase connection successfull", firebaseConfig);
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
-export { app, analytics };
+export { app };

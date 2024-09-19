@@ -42,11 +42,6 @@ export const siteConfig = {
       label: "Contact Us",
       href: "/contact",
     },
-
-    {
-      label: "Logout",
-      href: "/logout",
-    },
   ],
   links: {
     github: "https://github.com/adacodesolutions/",
